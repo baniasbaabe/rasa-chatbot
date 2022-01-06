@@ -16,3 +16,8 @@ rules:
   steps:
   - intent: chitchat
   - action: utter_chitchat
+
+- rule: Trigger Hometown Chitchat
+  steps:
+  - intent: ask_location
+  - action: action_give_location

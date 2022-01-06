@@ -7,8 +7,8 @@ intents:
   - deny
   - mood_great
   - mood_unhappy
-  # - bot_challenge
   - chitchat
+  - ask_location
 
 responses:
   utter_greet:
@@ -36,3 +36,4 @@ session_config:
 
 actions:
 - utter_chitchat
+- action_give_location

@@ -127,6 +127,59 @@ nlu:
     - I could use some help
     - can you do me a favor
 
+- intent: chitchat/ask_fun
+  examples: |
+    - do you know a joke?
+    - you are funny
+    - can you tell me something funny
+    - can you tell me sth funny
+    - I want to laugh
+    - I want a joke
+    - I wanna laugh
+    - do you have a joke for me
+    - do you have some jokes
+    - do you have a joke
+
+- intent: chitchat/ask_howbuilt
+  examples: |
+    - who built you
+    - by what means were you made
+    - do you know how you were built
+    - do you know something about your anatomy
+    - do you know how you were made
+    - how you were constructed
+    - by what method were you made
+
+- intent: chitchat/ask_age
+  examples: |
+    - how old are you
+    - what is your age
+    - your age
+    - are you a minor
+    - how many years did you spend on this earth
+    - how many years do you live
+
+- intent: chitchat/ask_handlingdata
+  examples: |
+    - what do you do with my data
+    - do you save what I say
+    - are you saving data
+    - do you save my questions
+    - do you save our chat
+    - how do you handle my data
+    - do you handle my data regarding data regulatories
+
+- intent: ask_location
+  examples: |
+    - where do you live
+    - in which city do you live
+    - in which country do you live
+    - where are you based at
+    - where do you come from
+    - where is your hood
+    - what is your hometown
+    - where is your base
+
 responses:
   utter_chitchat/bot_challenge:
   - text: "Haha. You will never know ;)"
@@ -138,6 +191,16 @@ responses:
   - text: "Thank you for your question. Normally nobody cares about my mood, but I am fine :)"
 
   utter_chitchat/ask_help:
-  - text: "I am always there for you! Shoot your shot. "
+  - text: "I am always there for you! Shoot your shot."
 
+  utter_chitchat/ask_fun:
+  - text: "I am not funny so I can't tell jokes, but if you want some jokes visit https://blog.lingoda.com/en/top-10-english-jokes/"
 
+  utter_chitchat/ask_age:
+  - text: "I am 21, so I can drink beer legally and hit parties."
+  
+  utter_chitchat/ask_howbuilt:
+  - text: "That will be by little secret... Everyone has some secrets ;)"
+
+  utter_chitchat/ask_handlingdata:
+  - text: "No worries. I will not save our chat. You can trust me like I trust you! :)"
