@@ -1,0 +1,143 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - selam
+    - hallo
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: chitchat/bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what are you?
+    - who are you?
+
+- intent: chitchat/ask_languages
+  examples: |
+    - which languages can you speak?
+    - which language you talk?
+    - do you know other languages?
+    - do you speak more than one language?
+    - how many languages are you familiar with?
+    - can you communicate in other languages?
+
+- intent: chitchat/ask_mood
+  examples: |
+    - how are you?
+    - how are you doing?
+    - how are you going?
+    - what is your mood right now?
+    - everything good with you?
+    - are you well?
+    - how is it going?
+    - how is it standing?
+
+- intent: chitchat/ask_help
+  examples: |
+    - I have a question
+    - can you help me?
+    - I need help
+    - I need your help
+    - do you have a minute?
+    - I would appreciate your knowledge on this topic
+    - I need a quick bit of help
+    - can you help me out?
+    - I could use some help
+    - can you do me a favor
+
+responses:
+  utter_chitchat/bot_challenge:
+  - text: "Haha. You will never know ;)"
+
+  utter_chitchat/ask_languages:
+  - text: "My parents can speak many languages, but they only taught me English :("
+
+  utter_chitchat/ask_mood:
+  - text: "Thank you for your question. Normally nobody cares about my mood, but I am fine :)"
+
+  utter_chitchat/ask_help:
+  - text: "I am always there for you! Shoot your shot. "
+
+
