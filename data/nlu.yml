@@ -93,6 +93,7 @@ nlu:
     - am I talking to a human?
     - what are you?
     - who are you?
+    - are you a real human
 
 - intent: chitchat/ask_languages
   examples: |
@@ -179,6 +180,25 @@ nlu:
     - where is your hood
     - what is your hometown
     - where is your base
+
+- intent: ask_weather
+  examples: |
+    - what is the weather like today
+    - whats the weather today
+    - how cold is it today
+    - how warm is it today
+    - how hot is it today
+    - how many centigrades will it be today
+    - is it rainy
+    - is there snow
+
+- intent: ask_day
+  examples: |
+    - what day is it today
+    - which weekday is it today
+    - whats the date today
+    - which date do we have
+    - what day are we
 
 responses:
   utter_chitchat/bot_challenge:

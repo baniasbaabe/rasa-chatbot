@@ -21,3 +21,13 @@ rules:
   steps:
   - intent: ask_location
   - action: action_give_location
+
+- rule: Trigger Weather Chitchat
+  steps:
+  - intent: ask_weather
+  - action: action_give_weather
+
+- rule: Trigger Day Today Chitchat
+  steps:
+  - intent: ask_day
+  - action: action_give_day

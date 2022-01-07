@@ -9,6 +9,8 @@ intents:
   - mood_unhappy
   - chitchat
   - ask_location
+  - ask_weather
+  - ask_day
 
 responses:
   utter_greet:
@@ -37,3 +39,5 @@ session_config:
 actions:
 - utter_chitchat
 - action_give_location
+- action_give_weather
+- action_give_day
