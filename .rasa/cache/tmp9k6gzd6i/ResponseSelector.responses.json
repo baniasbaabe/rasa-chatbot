@@ -1,0 +1,67 @@
+{
+  "utter_payment_methods": [
+    {
+      "text": "We accept the following payment methods: cash, card, Bitcoin or you can wash our dishes ;)"
+    }
+  ],
+  "utter_parking_slots": [
+    {
+      "text": "As the Königsstraße is always very busy and therefore the parking situation is very difficult, we recommend using buses and trains"
+    }
+  ],
+  "utter_contact": [
+    {
+      "text": "You can contact us via mail (orient@kebab.com) or call us (+49 176 9912832)"
+    }
+  ],
+  "utter_open_time": [
+    {
+      "text": "We are open from Monday to Sunday between 8 am and 9 pm."
+    }
+  ],
+  "utter_restaurant_location": [
+    {
+      "text": "Orient Kebab Grill is in the Königsstraße 1, 70173 Stuttgart."
+    }
+  ],
+  "utter_chitchat/bot_challenge": [
+    {
+      "text": "Haha. You will never know ;)"
+    }
+  ],
+  "utter_chitchat/ask_languages": [
+    {
+      "text": "My parents can speak many languages, but they only taught me English :("
+    }
+  ],
+  "utter_chitchat/ask_mood": [
+    {
+      "text": "Thank you for your question. Normally nobody cares about my mood, but I am fine :)"
+    }
+  ],
+  "utter_chitchat/ask_help": [
+    {
+      "text": "I am always there for you! Shoot your shot."
+    }
+  ],
+  "utter_chitchat/ask_fun": [
+    {
+      "text": "I am not funny so I can't tell jokes, but if you want some jokes visit https://blog.lingoda.com/en/top-10-english-jokes/"
+    }
+  ],
+  "utter_chitchat/ask_age": [
+    {
+      "text": "I am 21, so I can drink beer legally and hit parties."
+    }
+  ],
+  "utter_chitchat/ask_howbuilt": [
+    {
+      "text": "That will be by little secret."
+    }
+  ],
+  "utter_chitchat/ask_handlingdata": [
+    {
+      "text": "No worries. I will not save our chat. You can trust me like I trust you! :)"
+    }
+  ]
+}

@@ -13,37 +13,36 @@ import requests
 import datetime
 from urllib.request import urlopen
 
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-class ActionGiveLocation(Action):
+# class ActionGiveLocation(Action):
 
-    def name(self) -> Text:
-        return "action_give_location"
+#     def name(self) -> Text:
+#         return "action_give_location"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        try:
-            url = 'http://ipinfo.io/json'
-            response = urlopen(url)
-            data = json.load(response)
+#         try:
+#             url = 'http://ipinfo.io/json'
+#             response = urlopen(url)
+#             data = json.load(response)
 
-            IP = data['ip']
-            org = data['org']
-            city = data['city']
-            country = data['country']
-            region = data['region']
+#             IP = data['ip']
+#             org = data['org']
+#             city = data['city']
+#             country = data['country']
+#             region = data['region']
 
-            message = f"I am living in {city}, {country}... Just like you ;)"
-        except:
-            message = "I am living in Stuttgart, DE."
+#             message = f"I am living in {city}, {country}... Just like you ;)"
+#         except:
+#             message = "I am living in Stuttgart, DE."
 
-        dispatcher.utter_message(text = message)
+#         dispatcher.utter_message(text = message)
 
-        return []
+#         return []
 
 class ActionGiveWeather(Action):
 
@@ -89,14 +88,14 @@ class ActionGiveWeather(Action):
             weather = "It is raining! Do not forget an umbrella."
 
         else:
-            weather = f"There is {data['weather'][0]['main']}"
+            weather = f"We have {data['weather'][0]['main']}"
 
         if data["main"]["temp"] <= 3.0:
-            temperature = f"The temperature is {data['main']['temp']} and it feels like {data['main']['feels_like']}. Minimum is {data['main']['temp_min']} and maximum is {data['main']['temp_max']}. Brrrrr so cold."
+            temperature = f"The temperature is {data['main']['temp']} degrees Celsius and it feels like {data['main']['feels_like']} degrees Celsius. Minimum is {data['main']['temp_min']} and maximum is {data['main']['temp_max']} degrees Celsius. Brrrrr so cold."
         elif data["main"]["temp"] >= 25.0:
-            temperature = f"The temperature is {data['main']['temp']}  and it feels like {data['main']['feels_like']}. BBQ time?."
+            temperature = f"The temperature is {data['main']['temp']} degrees Celsius and it feels like {data['main']['feels_like']} degrees Celsius. Kebab time?."
         else:
-            temperature = f"The temperature is {data['main']['temp']}  and it feels like {data['main']['feels_like']}."
+            temperature = f"The temperature is {data['main']['temp']} degrees Celsius and it feels like {data['main']['feels_like']} degrees Celsius."
 
         message = f"{weather} {temperature}"
 

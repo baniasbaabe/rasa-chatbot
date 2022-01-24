@@ -85,6 +85,184 @@ nlu:
     - so saad
     - so sad
 
+- intent: ask_restaurant_location
+  examples: |
+    - where is your restaurant
+    - where can I find your restaurant
+    - where is your local based
+    - how can i find your restaurant
+    - how can i find your local
+    - how do i get to the local
+    - how do i get to the restaurant
+
+- intent: ask_open_time
+  examples: |
+    - until when can i visit your local
+    - what time is the restaurant open
+    - what time do you open
+    - what time are you open
+    - when are you open
+    - when is your opening time
+    - when is your opening hours
+    - when will you be open
+    - when can i come
+    - when can i eat
+
+- intent: ask_contact
+  examples: |
+    - how can i contact you
+    - how can i message you
+    - how can i call you
+    - what is your phone number
+    - what is your email 
+    - do you have a number
+    - do you have email
+
+- intent: ask_parking_slots
+  examples: |
+    - are there any parking slots
+    - are there parking spots
+    - where can i park my car
+    - can i park there
+    - is there a parking facility
+    - is there space for parking
+    - is car parking possible
+    - is parking available
+
+- intent: ask_payment_methods
+  examples: |
+    - how can you pay
+    - how do i pay
+    - which payment methods do you have
+    - can i pay cash
+    - can i pay with debit card
+    - can i pay with bank card
+    - can i use card
+    - can i use crypto
+    - do you accept cash
+    - do you accept debit card
+    - do you accept bank card
+    - do you accept crypto
+
+- intent: give_criticism
+  examples: |
+    - the food was very nice
+    - the food was awesome
+    - the food was not really good
+    - the food was bad
+    - the food did not taste well
+    - the food was not the best
+    - the personal was not nice
+    - the personal was nice
+    - the personal was very rude
+    - there was not enough space
+    - there was enough space
+    - it tastes very well
+    - it was nice
+    - it was wonderful
+    - it was bad
+    - it was trash
+    - it was not the best
+    - i will come back
+    - i will never come back
+    - i will never come again
+
+- intent: ask_delivery
+  examples: |
+    - do you have delivery service
+    - can you bring the food to my home
+    - can you deliver food to my home
+    - do you bring food to my home
+
+- intent: ask_disabled
+  examples: |
+    - is the restaurant accessible for disabled people
+    - i am disabled
+    - i am in a wheelchair
+    - is there space for disabled people
+
+- intent: ask_wifi
+  examples: |
+    - do you have internet
+    - do you have wifi
+    - do you have wlan
+    - can i use internet
+    - i need internet
+    - i need access to the internet
+
+- intent: ask_smoking
+  examples: |
+    - i want to smoke
+    - can i smoke
+    - can i smoke cigarettes
+    - is there smoking room
+    - are cigarettes forbidden
+
+- intent: ask_pets
+  examples: |
+    - i have a dog
+    - i have a cat
+    - i have a pet
+    - are pets allowed
+    - are dogs allowed
+    - can i bring my pet
+    - can i bring my dog
+    - can i bring my cat
+    - is it possible to bring my pets with me
+
+- intent: ask_kids
+  examples: |
+    - i have a kid
+    - i have children
+    - i have a young boy
+    - i have a young girl
+    - are there chairs for kids
+    - are there seat possibilities for kids
+    - can my kid sit on a chair
+
+- intent: ask_food_to_go
+  examples: |
+    - can i take food to go
+    - can i take food away
+    - can i take food with me
+    - what if i do not finish the food
+    - do i have to throw food away
+    - what if i cant anymore
+    - what if i am not hungry anymore
+
+- intent: ask_seat_place_wishes
+  examples: |
+    - can i reserve a specific table
+    - can i seat where i want
+    - can i reserve a specific seat
+    - do you accept reservations regarding specific seats
+
+- intent: ask_alcohol
+  examples: |
+    - i want alcohol
+    - can i order alcohol
+    - can i have a beer
+    - can i drink alcohol
+    - can i drink beer
+    - can i drink wine
+    - do you sell alcohol
+    - do you sell wine
+    - do you have beer
+    - do you have vodka
+    - do you offer alcohol
+
+- intent: ask_coupons
+  examples: |
+    - do you have coupons
+    - do you have voucher
+    - do you have bonus card
+    - do you have promotions
+    - do you offer coupons
+    - do you offer voucher
+    - do you offer bonus card
+    - do you offer promotions
+    - can i eat cheaper
+    
 - intent: chitchat/bot_challenge
   examples: |
     - are you a bot?
@@ -109,24 +287,24 @@ nlu:
     - how are you?
     - how are you doing?
     - how are you going?
+    - how is it going?
+    - how is it standing?
     - what is your mood right now?
     - everything good with you?
     - are you well?
-    - how is it going?
-    - how is it standing?
 
 - intent: chitchat/ask_help
   examples: |
     - I have a question
-    - can you help me?
     - I need help
     - I need your help
-    - do you have a minute?
     - I would appreciate your knowledge on this topic
     - I need a quick bit of help
-    - can you help me out?
     - I could use some help
+    - do you have a minute?
     - can you do me a favor
+    - can you help me?
+    - can you help me out?
 
 - intent: chitchat/ask_fun
   examples: |
@@ -150,6 +328,7 @@ nlu:
     - do you know how you were made
     - how you were constructed
     - by what method were you made
+    - who is your founder
 
 - intent: chitchat/ask_age
   examples: |
@@ -169,17 +348,6 @@ nlu:
     - do you save our chat
     - how do you handle my data
     - do you handle my data regarding data regulatories
-
-- intent: ask_location
-  examples: |
-    - where do you live
-    - in which city do you live
-    - in which country do you live
-    - where are you based at
-    - where do you come from
-    - where is your hood
-    - what is your hometown
-    - where is your base
 
 - intent: ask_weather
   examples: |
@@ -201,6 +369,54 @@ nlu:
     - what day are we
 
 responses:
+  utter_coupons:
+  - text: "When you visit us for the first time, you get a stamp card that you can have stamped every time you visit us. When it's been stamped 10 times, you get a free meal."
+
+  utter_alcohol:
+  - text: "We do not offer alcoholic drinks because our restaurant is also visited by children. We only offer alcohol free beer."
+
+  utter_seat_place_wishes:
+  - text: "We will try to accommodate your seating request. Unfortunately this is not always possible."
+
+  utter_food_to_go:
+  - text: "You can take your unfinished food with you. Just tell the personal and they will wrap it safely."
+
+  utter_kids:
+  - text: "We have a limited number of chairs for kids. Just tell the personal that you need some."
+
+  utter_pets:
+  - text: "Unfortunately pets are not allowed because of the rules from the ministry of health."
+
+  utter_smoking:
+  - text: "We are sorry, but we do not allow to smoke. It will only annoy other customers."
+
+  utter_wifi:
+  - text: "You can access our WLAN via the following credentials: Name = ORIENT_KEBAB_GRILL and Password = a2HwI82?s!na"
+
+  utter_disabled:
+  - text: "Our restaurant is completely wheelchair accessible and our WC can be accessed with a wheelchair."
+
+  utter_delivery:
+  - text: "Unfortunately we do not offer a delivery service yet. We plan to test it in 2023."
+
+  utter_payment_methods:
+  - text: "We accept the following payment methods: cash, card, Bitcoin or you can wash our dishes ;)"
+
+  utter_parking_slots:
+  - text: "As the Königsstraße is always very busy and therefore the parking situation is very difficult, we recommend using buses and trains."
+
+  utter_contact:
+  - text: "You can contact us via mail (orient@kebab.com) or call us (+49 176 9912832)"
+
+  utter_open_time:
+  - text: "We are open from Monday to Sunday between 8 am and 9 pm."
+
+  utter_restaurant_location:
+  - text: "Orient Kebab Grill is in the Königsstraße 1, 70173 Stuttgart."
+
+  utter_criticism:
+  - text: "We only want satisfied customers and take feedback seriously. If you want to give detailed feedback, you can fill out this form: https://forms.gle/WfvFVNUeMdxMHhrR8"
+
   utter_chitchat/bot_challenge:
   - text: "Haha. You will never know ;)"
 
@@ -220,7 +436,7 @@ responses:
   - text: "I am 21, so I can drink beer legally and hit parties."
   
   utter_chitchat/ask_howbuilt:
-  - text: "That will be by little secret... Everyone has some secrets ;)"
+  - text: "That will be by little secret."
 
   utter_chitchat/ask_handlingdata:
   - text: "No worries. I will not save our chat. You can trust me like I trust you! :)"

@@ -8,9 +8,24 @@ intents:
   - mood_great
   - mood_unhappy
   - chitchat
-  - ask_location
+  - give_criticism
   - ask_weather
   - ask_day
+  - ask_restaurant_location
+  - ask_open_time
+  - ask_contact
+  - ask_parking_slots
+  - ask_payment_methods
+  - ask_delivery
+  - ask_disabled
+  - ask_wifi
+  - ask_smoking
+  - ask_pets
+  - ask_kids
+  - ask_food_to_go
+  - ask_seat_place_wishes
+  - ask_alcohol
+  - ask_coupons
 
 responses:
   utter_greet:
@@ -37,7 +52,5 @@ session_config:
   carry_over_slots_to_new_session: true
 
 actions:
-- utter_chitchat
-- action_give_location
 - action_give_weather
 - action_give_day

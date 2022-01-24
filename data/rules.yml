@@ -7,20 +7,10 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-# - rule: Say 'I am a bot' anytime the user challenges
-#   steps:
-#   - intent: bot_challenge
-#   - action: utter_iamabot
-
 - rule: Trigger Chitchat
   steps:
   - intent: chitchat
   - action: utter_chitchat
-
-- rule: Trigger Hometown Chitchat
-  steps:
-  - intent: ask_location
-  - action: action_give_location
 
 - rule: Trigger Weather Chitchat
   steps:
@@ -31,3 +21,83 @@ rules:
   steps:
   - intent: ask_day
   - action: action_give_day
+
+- rule: Trigger Restaurant Location
+  steps:
+  - intent: ask_restaurant_location
+  - action: utter_restaurant_location
+
+- rule: Trigger Restaurant Opening times
+  steps:
+  - intent: ask_open_time
+  - action: utter_open_time
+
+- rule: Trigger Restaurant contact
+  steps:
+  - intent: ask_contact
+  - action: utter_contact
+
+- rule: Trigger Restaurant Parking Slots
+  steps:
+  - intent: ask_parking_slots
+  - action: utter_parking_slots
+
+- rule: Trigger Restaurant Payment methods
+  steps:
+  - intent: ask_payment_methods
+  - action: utter_payment_methods
+
+- rule: Trigger Restaurant Criticism
+  steps:
+  - intent: give_criticism
+  - action: utter_criticism
+
+- rule: Trigger Restaurant Delivery
+  steps:
+  - intent: ask_delivery
+  - action: utter_delivery
+
+- rule: Trigger Restaurant disabled
+  steps:
+  - intent: ask_disabled
+  - action: utter_disabled
+
+- rule: Trigger Restaurant wifi
+  steps:
+  - intent: ask_wifi
+  - action: utter_wifi
+
+- rule: Trigger Restaurant smoking
+  steps:
+  - intent: ask_smoking
+  - action: utter_smoking
+
+- rule: Trigger Restaurant pets
+  steps:
+  - intent: ask_pets
+  - action: utter_pets
+
+- rule: Trigger Restaurant kids
+  steps:
+  - intent: ask_kids
+  - action: utter_kids
+
+- rule: Trigger Restaurant food to go
+  steps:
+  - intent: ask_food_to_go
+  - action: utter_food_to_go
+
+- rule: Trigger Restaurant seat wish
+  steps:
+  - intent: ask_seat_place_wishes
+  - action: utter_seat_place_wishes
+
+- rule: Trigger Restaurant alcohol
+  steps:
+  - intent: ask_alcohol
+  - action: utter_alcohol
+
+- rule: Trigger Restaurant coupons
+  steps:
+  - intent: ask_coupons
+  - action: utter_coupons
