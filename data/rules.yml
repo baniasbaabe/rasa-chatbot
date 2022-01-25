@@ -101,3 +101,13 @@ rules:
   steps:
   - intent: ask_coupons
   - action: utter_coupons
+
+- rule: Trigger Restaurant invoice
+  steps:
+  - intent: ask_invoice
+  - action: utter_invoice
+
+- rule: Trigger Restaurant menu card
+  steps:
+  - intent: ask_menu_card
+  - action: utter_menu_card

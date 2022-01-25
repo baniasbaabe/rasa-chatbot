@@ -262,6 +262,29 @@ nlu:
     - do you offer bonus card
     - do you offer promotions
     - can i eat cheaper
+
+- intent: ask_invoice
+  examples: |
+    - can i get an invoice
+    - invoice
+    - do you give me an invoice
+    - do you write invoices
+    - may i get an invoice
+    - i want an invoice 
+
+- intent: ask_menu_card
+  examples: |
+    - do you have a menu card
+    - do you possess a menu card
+    - show me your card
+    - show me your menus
+    - show me your food
+    - i want a card
+    - i want to see your card
+    - which menus do you offer
+    - what can i eat
+    - what can i have to eat
+    - which kind of food do you offer
     
 - intent: chitchat/bot_challenge
   examples: |
@@ -369,6 +392,12 @@ nlu:
     - what day are we
 
 responses:
+  utter_menu_card:
+  - text: "Take a look at our menu card: https://drive.google.com/file/d/1jnngcQxGkQL0m_B9C-RSf-GZkVdKJV1m/view?usp=sharing"
+
+  utter_invoice:
+  - text: "You will always get an invoice after ordering something."
+
   utter_coupons:
   - text: "When you visit us for the first time, you get a stamp card that you can have stamped every time you visit us. When it's been stamped 10 times, you get a free meal."
 

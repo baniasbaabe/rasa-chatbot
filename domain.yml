@@ -26,6 +26,8 @@ intents:
   - ask_seat_place_wishes
   - ask_alcohol
   - ask_coupons
+  - ask_invoice
+  - ask_menu_card
 
 responses:
   utter_greet:
