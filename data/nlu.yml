@@ -151,6 +151,8 @@ nlu:
     - the food was not really good
     - the food was bad
     - the food did not taste well
+    - the food was trash
+    - the food was awful
     - the food was not the best
     - the personal was not nice
     - the personal was nice
@@ -232,9 +234,9 @@ nlu:
 
 - intent: ask_seat_place_wishes
   examples: |
-    - can i reserve a specific table
     - can i seat where i want
-    - can i reserve a specific seat
+    - can i get a specific seat
+    - can i get a specific table
     - do you accept reservations regarding specific seats
 
 - intent: ask_alcohol
@@ -285,7 +287,71 @@ nlu:
     - what can i eat
     - what can i have to eat
     - which kind of food do you offer
-    
+
+- intent: ask_food_price
+  examples: |
+    - how much does [iskender](dish) cost
+    - how much does [cöpsis](dish) cost
+    - how much does [lahmacun](dish) cost
+    - how much does [kaburga](dish) cost
+    - how much does [dürüm](dish) cost
+    - what does [cöpsis](dish) cost
+    - what is the price of [lahmacun](dish)
+    - what is the price of [cöpsis](dish)
+    - what is the price of [lahmacun](dish)
+    - what is the price of [kaburga](dish)
+    - what is the price of [dürüm](dish)
+
+- intent: ask_vegetarian
+  examples: |
+    - do you offer only meat dishes
+    - do you offer vegetarian food
+    - do you offer vegan food
+    - do you have only meat dishes
+    - do you have vegetarian dishes
+    - do you have vegetarian food
+    - do you have vegan dishes
+    - i am vegan
+    - i am vegetarian
+    - i cant eat meat
+    - i cant eat animal based products
+
+- intent: reserve
+  examples: |
+    - i want to reserve
+    - can i reserve
+    - can i have a reservation
+
+- intent: inform_time
+  examples: |
+    - [8am](time)
+    - [9pm](time)
+    - [12am](time)
+    - [1pm](time)
+    - [2pm](time)
+    - [3pm](time)
+    - [2am](time)
+    - [1am](time)
+
+- intent: inform_date
+  examples: |
+    - [today](date)
+    - [tomorrow](date)
+    - [monday](date)
+    - [tuesday](date)
+    - [wednesday](date)
+    - [thursday](date)
+    - [friday](date)
+    - [saturday](date)
+    - [sunday](date)
+
+- intent: inform_email
+  examples: |
+    - my email is [example@example.com](email)
+    - [random@randomrandom.de](email)
+    - [something@example.com](email)
+    - Email is [random@example.de](email)
+
 - intent: chitchat/bot_challenge
   examples: |
     - are you a bot?
@@ -392,6 +458,18 @@ nlu:
     - what day are we
 
 responses:
+  utter_ask_email:
+  - text: "What is your email address?"
+
+  utter_ask_date:
+  - text: "Which day you want to come?"
+
+  utter_ask_time:
+  - text: "Which time?"
+
+  utter_vegetarian:
+  - text: "We also offer plant-based meat without changing the taste. Just tell the personal that you do not want to eat meat dishes."
+
   utter_menu_card:
   - text: "Take a look at our menu card: https://drive.google.com/file/d/1jnngcQxGkQL0m_B9C-RSf-GZkVdKJV1m/view?usp=sharing"
 
@@ -468,4 +546,4 @@ responses:
   - text: "That will be by little secret."
 
   utter_chitchat/ask_handlingdata:
-  - text: "No worries. I will not save our chat. You can trust me like I trust you! :)"
+  - text: "No worries. The chat and your messages will not be saved :)"

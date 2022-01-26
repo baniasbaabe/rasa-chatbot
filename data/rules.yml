@@ -2,6 +2,11 @@ version: "3.0"
 
 rules:
 
+- rule: Say hi anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -111,3 +116,13 @@ rules:
   steps:
   - intent: ask_menu_card
   - action: utter_menu_card
+
+- rule: Trigger Restaurant food price
+  steps:
+  - intent: ask_food_price
+  - action: action_give_food_price
+
+- rule: Trigger Restaurant vegetarian
+  steps:
+  - intent: ask_vegetarian
+  - action: utter_vegetarian

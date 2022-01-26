@@ -28,3 +28,11 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: reserve table
+  steps:
+  - intent: reserve
+  - action: reservation_form
+  - active_loop: reservation_form
+  - active_loop: null
+  - action: action_confirm_reservation

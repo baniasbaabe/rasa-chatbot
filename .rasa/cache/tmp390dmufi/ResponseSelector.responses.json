@@ -1,0 +1,157 @@
+{
+  "utter_ask_email": [
+    {
+      "text": "What is your email address?"
+    }
+  ],
+  "utter_ask_number_people": [
+    {
+      "text": "How many people will come?"
+    }
+  ],
+  "utter_ask_date": [
+    {
+      "text": "Which day you want to come?"
+    }
+  ],
+  "utter_ask_time": [
+    {
+      "text": "Which time?"
+    }
+  ],
+  "utter_vegetarian": [
+    {
+      "text": "We also offer plant-based meat without changing the taste. Just tell the personal that you do not want to eat meat dishes."
+    }
+  ],
+  "utter_menu_card": [
+    {
+      "text": "Take a look at our menu card: https://drive.google.com/file/d/1jnngcQxGkQL0m_B9C-RSf-GZkVdKJV1m/view?usp=sharing"
+    }
+  ],
+  "utter_invoice": [
+    {
+      "text": "You will always get an invoice after ordering something."
+    }
+  ],
+  "utter_coupons": [
+    {
+      "text": "When you visit us for the first time, you get a stamp card that you can have stamped every time you visit us. When it's been stamped 10 times, you get a free meal."
+    }
+  ],
+  "utter_alcohol": [
+    {
+      "text": "We do not offer alcoholic drinks because our restaurant is also visited by children. We only offer alcohol free beer."
+    }
+  ],
+  "utter_seat_place_wishes": [
+    {
+      "text": "We will try to accommodate your seating request. Unfortunately this is not always possible."
+    }
+  ],
+  "utter_food_to_go": [
+    {
+      "text": "You can take your unfinished food with you. Just tell the personal and they will wrap it safely."
+    }
+  ],
+  "utter_kids": [
+    {
+      "text": "We have a limited number of chairs for kids. Just tell the personal that you need some."
+    }
+  ],
+  "utter_pets": [
+    {
+      "text": "Unfortunately pets are not allowed because of the rules from the ministry of health."
+    }
+  ],
+  "utter_smoking": [
+    {
+      "text": "We are sorry, but we do not allow to smoke. It will only annoy other customers."
+    }
+  ],
+  "utter_wifi": [
+    {
+      "text": "You can access our WLAN via the following credentials: Name = ORIENT_KEBAB_GRILL and Password = a2HwI82?s!na"
+    }
+  ],
+  "utter_disabled": [
+    {
+      "text": "Our restaurant is completely wheelchair accessible and our WC can be accessed with a wheelchair."
+    }
+  ],
+  "utter_delivery": [
+    {
+      "text": "Unfortunately we do not offer a delivery service yet. We plan to test it in 2023."
+    }
+  ],
+  "utter_payment_methods": [
+    {
+      "text": "We accept the following payment methods: cash, card, Bitcoin or you can wash our dishes ;)"
+    }
+  ],
+  "utter_parking_slots": [
+    {
+      "text": "As the Königsstraße is always very busy and therefore the parking situation is very difficult, we recommend using buses and trains."
+    }
+  ],
+  "utter_contact": [
+    {
+      "text": "You can contact us via mail (orient@kebab.com) or call us (+49 176 9912832)"
+    }
+  ],
+  "utter_open_time": [
+    {
+      "text": "We are open from Monday to Sunday between 8 am and 9 pm."
+    }
+  ],
+  "utter_restaurant_location": [
+    {
+      "text": "Orient Kebab Grill is in the Königsstraße 1, 70173 Stuttgart."
+    }
+  ],
+  "utter_criticism": [
+    {
+      "text": "We only want satisfied customers and take feedback seriously. If you want to give detailed feedback, you can fill out this form: https://forms.gle/WfvFVNUeMdxMHhrR8"
+    }
+  ],
+  "utter_chitchat/bot_challenge": [
+    {
+      "text": "Haha. You will never know ;)"
+    }
+  ],
+  "utter_chitchat/ask_languages": [
+    {
+      "text": "My parents can speak many languages, but they only taught me English :("
+    }
+  ],
+  "utter_chitchat/ask_mood": [
+    {
+      "text": "Thank you for your question. Normally nobody cares about my mood, but I am fine :)"
+    }
+  ],
+  "utter_chitchat/ask_help": [
+    {
+      "text": "I am always there for you! Shoot your shot."
+    }
+  ],
+  "utter_chitchat/ask_fun": [
+    {
+      "text": "I am not funny so I can't tell jokes, but if you want some jokes visit https://blog.lingoda.com/en/top-10-english-jokes/"
+    }
+  ],
+  "utter_chitchat/ask_age": [
+    {
+      "text": "I am 21, so I can drink beer legally and hit parties."
+    }
+  ],
+  "utter_chitchat/ask_howbuilt": [
+    {
+      "text": "That will be by little secret."
+    }
+  ],
+  "utter_chitchat/ask_handlingdata": [
+    {
+      "text": "No worries. The chat and your messages will not be saved :)"
+    }
+  ]
+}

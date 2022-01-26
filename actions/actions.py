@@ -4,16 +4,31 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-from typing import Any, Text, Dict, List
 
 import json
 import requests
 import datetime
+import pandas as pd
 from urllib.request import urlopen
 from PIL import Image
+from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import AllSlotsReset
+
+def get_price(dish):
+    df = pd.read_csv(r"dataframe/dishes.csv")
+
+    filtered_df = df[df.Dish.str.contains(dish, case = False)]
+
+    if filtered_df.empty:
+        return None, None
+    
+    dish_name = filtered_df.iat[0, 0]
+    dish_price = filtered_df.iat[0, 1]
+
+    return dish_name, dish_price
 
 class ActionGiveWeather(Action):
 
@@ -101,6 +116,47 @@ class ActionGiveDay(Action):
         dispatcher.utter_message(text = message)
 
         return []
+
+class ActionGiveFoodPrice(Action):
+
+    def name(self) -> Text:
+        return "action_give_food_price"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dish = tracker.latest_message["entities"][0]["value"]
+
+        dish_name, dish_price = get_price(dish)
+
+        if dish_name and dish_price:
+            message = f"{dish_name} costs {dish_price} € (Euro)."
+        else:
+            message = "We don't offer your requested dish. Please take a look at our card: https://drive.google.com/file/d/1jnngcQxGkQL0m_B9C-RSf-GZkVdKJV1m/view?usp=sharing"
+
+        dispatcher.utter_message(text = message)
+
+        return []
+
+class ActionConfirmReservation(Action):
+
+    def name(self) -> Text:
+        return "action_confirm_reservation"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        email = tracker.get_slot("email")
+        time = tracker.get_slot("time")
+        date = tracker.get_slot("date")
+
+        message = f"We have noted your reservation.\nWhen? {date}\nTime? {time}\nEmail {email}"
+
+        dispatcher.utter_message(text = message)
+
+        return [AllSlotsReset()]
 
 # class ActionGiveLocation(Action):
 
