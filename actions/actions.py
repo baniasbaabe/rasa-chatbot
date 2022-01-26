@@ -126,7 +126,15 @@ class ActionGiveFoodPrice(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dish = tracker.latest_message["entities"][0]["value"]
+        dish_images = {
+            "iskender": "assets/iskender.jpg",
+            "cöpsis": "assets/coepsis.jpg",
+            "dürüm": "assets/dueruem.jpg",
+            "kaburga": "assets/kaburga.jpg",
+            "lahmacun": "assets/lahmacun.jpg"
+        }
+
+        dish = tracker.latest_message["entities"][0]["value"].lower()
 
         dish_name, dish_price = get_price(dish)
 
@@ -136,6 +144,12 @@ class ActionGiveFoodPrice(Action):
             message = "We don't offer your requested dish. Please take a look at our card: https://drive.google.com/file/d/1jnngcQxGkQL0m_B9C-RSf-GZkVdKJV1m/view?usp=sharing"
 
         dispatcher.utter_message(text = message)
+
+        try:
+            img = Image.open(dish_images[dish])
+            img.show()
+        except:
+            pass
 
         return []
 
