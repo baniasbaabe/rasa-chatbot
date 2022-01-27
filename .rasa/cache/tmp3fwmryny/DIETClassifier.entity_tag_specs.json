@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-date",
+      "2": "I-date",
+      "3": "L-date",
+      "4": "U-date",
+      "5": "B-dish",
+      "6": "I-dish",
+      "7": "L-dish",
+      "8": "U-dish",
+      "9": "B-email",
+      "10": "I-email",
+      "11": "L-email",
+      "12": "U-email",
+      "13": "B-time",
+      "14": "I-time",
+      "15": "L-time",
+      "16": "U-time",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-date": 1,
+      "I-date": 2,
+      "L-date": 3,
+      "U-date": 4,
+      "B-dish": 5,
+      "I-dish": 6,
+      "L-dish": 7,
+      "U-dish": 8,
+      "B-email": 9,
+      "I-email": 10,
+      "L-email": 11,
+      "U-email": 12,
+      "B-time": 13,
+      "I-time": 14,
+      "L-time": 15,
+      "U-time": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

@@ -72,7 +72,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey!"
+  - text: "Hey! Glad that you found us! We are an oriental restaurant in Stuttgart. What do you want to know?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
