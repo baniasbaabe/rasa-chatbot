@@ -18,6 +18,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import AllSlotsReset
 
 def get_price(dish):
+    
     df = pd.read_csv(r"dataframe/dishes.csv")
 
     filtered_df = df[df.Dish.str.contains(dish, case = False)]
@@ -74,7 +75,7 @@ class ActionGiveWeather(Action):
             weather = "It is raining! Do not forget an umbrella."
 
         else:
-            weather = f"We have {data['weather'][0]['main']}"
+            weather = f"We have {data['weather'][0]['main']}."
 
         if data["main"]["temp"] <= 3.0:
             temperature = f"The temperature is {data['main']['temp']} degrees Celsius and it feels like {data['main']['feels_like']} degrees Celsius. Minimum is {data['main']['temp_min']} and maximum is {data['main']['temp_max']} degrees Celsius. Brrrrr so cold."
@@ -133,6 +134,12 @@ class ActionGiveFoodPrice(Action):
             "kaburga": "assets/kaburga.jpg",
             "lahmacun": "assets/lahmacun.jpg"
         }
+
+        if len(tracker.latest_message["entities"]) == 0:
+            message = "We don't offer your requested dish. Please take a look at our card: https://drive.google.com/file/d/1jnngcQxGkQL0m_B9C-RSf-GZkVdKJV1m/view?usp=sharing"
+
+            dispatcher.utter_message(text = message)
+            return []
 
         dish = tracker.latest_message["entities"][0]["value"].lower()
 
