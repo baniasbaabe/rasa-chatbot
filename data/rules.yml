@@ -126,3 +126,8 @@ rules:
   steps:
   - intent: ask_vegetarian
   - action: utter_vegetarian
+
+- rule: Trigger Restaurant Corona
+  steps:
+  - intent: ask_corona
+  - action: utter_corona

@@ -30,6 +30,7 @@ intents:
   - ask_menu_card
   - ask_food_price
   - ask_vegetarian
+  - ask_corona
   - inform_date
   - inform_email
   - reserve

@@ -316,11 +316,23 @@ nlu:
     - i cant eat meat
     - i cant eat animal based products
 
+- intent: ask_corona
+  examples: |
+    - do i have to wear a mask
+    - which mask should i wear
+    - i dont want a mask
+    - i will not vaccinate myself
+    - how many people can come
+    - i am not vaccinated
+    - i am two times vaccinated
+    - i am one time vaccinated
+
 - intent: reserve
   examples: |
     - i want to reserve
     - can i reserve
     - can i have a reservation
+    - i want a reservation
 
 - intent: inform_time
   examples: |
@@ -458,6 +470,8 @@ nlu:
     - what day are we
 
 responses:
+  utter_corona:
+  - text: "As the Corona rules are constantly changing, you can read the latest information here: https://www.baden-wuerttemberg.de/de/service/aktuelle-infos-zu-corona/faq-corona-verordnung/"
   utter_ask_email:
   - text: "What is your email address?"
 
